@@ -1,0 +1,35 @@
+{
+  "name": "odmozdzacze",
+  "version": "1.0.0",
+  "description": "Odmozdzacze for desktop.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:linux": "electron-builder --linux",
+    "dist:windows": "electron-builder --windows"
+  },
+  "repository": "https://github.com/odmozdzacze/odmozdzacze-desktop.git",
+  "keywords": [
+    "Odmozdzacze",
+    "Odmozdzacze Desktop",
+    "Electron"
+  ],
+  "author": "ChimekKoo <chimeksushi@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/odmozdzacze",
+  "devDependencies": {
+    "electron": "^11.2.3",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "com.odmozdzacze.odmozdzacze",
+    "linux": {
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ],
+      "category": "Social"
+    }
+  }
+}
