@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "dist:linux": "electron-builder --linux",
-    "dist:windows": "electron-builder --windows"
+    "dist:windows": "electron-builder --windows",
+    "dist": "npm run dist:linux && npm run dist:windows"
   },
   "repository": "https://github.com/odmozdzacze/odmozdzacze-desktop.git",
   "keywords": [
@@ -16,20 +17,26 @@
   ],
   "author": "ChimekKoo <chimeksushi@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/odmozdzacze",
+  "homepage": "https://github.com/odmozdzacze/odmozdzacze-desktop#readme",
   "devDependencies": {
     "electron": "^11.2.3",
     "electron-builder": "^22.9.1"
   },
   "build": {
     "appId": "com.odmozdzacze.odmozdzacze",
+    "productName": "Odmozdzacze Desktop",
     "linux": {
+      "icon": "odmozdzacze_logo.png",
       "target": [
         "deb",
         "snap",
         "rpm"
       ],
       "category": "Social"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "odmozdzacze_logo.ico"
     }
   }
 }
