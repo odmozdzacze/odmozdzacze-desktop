@@ -1,6 +1,6 @@
 {
   "name": "odmozdzacze",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "Odmozdzacze for desktop.",
   "main": "main.js",
   "scripts": {
